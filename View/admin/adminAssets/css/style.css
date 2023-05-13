@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F1F6F9;
+    color: #212A3E;
+    overflow-x: hidden;
+    transform: translatex(0px);
+    transition: 0.5s;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    padding: 0 0;
+}
+
+#menuBTN {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+body.active {
+    transform: translatex(250px);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+nav.navbar{
+    background-color: #212A3E;
+    color: #F1F6F9;
+    margin-bottom: 20px;
+    /* position: absolute; */
+    /* right: 0; */
+    width: 100%;
+}
+
+.leftSide {
+    position: absolute;
+    left: -250px;
+    top: 0;
+    height: 100vh;
+    background-color: #394867;
+    color: #F1F6F9;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 75px 0 50px;
+    transition: 0.3s;
+    width: 250px;
+}
+
+.leftSide ul {
+    width: 100%;
+
+}
+
+.btn-primary {
+    border-bottom: 1px solid #F1F6F9;
+    border-top: 1px solid #F1F6F9;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 10px 45px 10px 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #F1F6F9;
+    text-align: left;
+}
+
+/* button.btn-primary {
+    border: none;
+} */
+
+.leftSide ul div ul li {
+    margin: 10px 0;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    border-radius: 0;
+}
+
+button[aria-expanded="true"] i {
+    transition: 0.3s;
+    transform: rotate(180deg);
+}
+
+button[aria-expanded="false"] i {
+    transition: 0.3s;
+    transform: rotate(0deg);
+}
+.Formpopup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: rgba(0, 0, 0, 0.863);
+    width: 700px;
+    padding: 50px;
+    z-index: 5;
+    border-radius: 10px;
+    display: none;
+}
+
+.OTPpopup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: rgba(0, 0, 0, 0.863);
+    width: 450px;
+    padding: 150px 50px;
+    z-index: 5;
+    border-radius: 5px;
+    display: none;
+}
+
+.fingerPopup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: rgba(0, 0, 0, 0.863);
+    width: 450px;
+    padding: 150px 50px;
+    z-index: 5;
+    border-radius: 5px;
+    display: none;
+}
+
+
+.OTPpopup a.forget {
+    color: red;
+    text-decoration: none;
+    display: block;
+    margin-left: auto;
+    text-align: right;
+}
+
+.DashBoard-screen{
+    padding-top: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}

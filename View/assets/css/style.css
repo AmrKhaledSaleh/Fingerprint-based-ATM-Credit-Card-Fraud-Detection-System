@@ -1,0 +1,301 @@
+/* start rules  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: linear-gradient(45deg, rgba(16, 59, 151, 1) 25%, rgba(2, 180, 245, 1) 100%);
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    filter: blur(20px);
+}
+
+.btn-primary {
+    box-shadow: 0 0 0 black;
+    background-color: #F6016B;
+    border-color: #F6016B;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #c40055;
+    border-color: #c40055;
+
+}
+
+
+
+/* end rules  */
+
+/* start insert  */
+
+.insert {
+    padding: 20px 0;
+}
+
+.insert.active {
+    filter: blur(5px);
+}
+
+.insert .screens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.insert .screen {
+    width: 450px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.451);
+    padding: 80px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 8px #0000002b;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+/* .insert .fingerprint */
+
+.insert .fingerPrint .scanFingerPrint {
+    position: relative;
+    width: fit-content;
+}
+
+.insert .fingerPrint .finger2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill-opacity: 0;
+    stroke-dasharray: 1906px;
+    stroke-dashoffset: 1906;
+    stroke: #fff;
+    stroke-width: 15px;
+    transition: 1s;
+}
+
+.insert .fingerPrint .finger2:hover,
+.insert .fingerPrint .finger2.active {
+    stroke-dashoffset: 0;
+
+}
+
+/* start info  */
+
+.insert .screens.bg {
+    background-color: #010a4a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 8px #0000002b;
+}
+
+.insert .info {
+    padding: 10px 40px;
+}
+
+.insert .info h2 {
+    text-align: start;
+    font-size: 18px;
+}
+
+.insert .info .userInfo span {
+    color: #02b4f5;
+}
+
+.insert .info .userInfo button {
+    background-color: transparent;
+    text-align: left;
+    border: none;
+    outline: none;
+    color: #F6016B;
+}
+
+/* start menu  */
+.insert .screen.info,
+.insert .screen.menu {
+    background-color: transparent;
+    box-shadow: unset;
+}
+
+.insert .menu .btnMenu {
+    background-color: #02b4f5;
+    border-radius: 5px;
+    color: white;
+    padding: 20px;
+    width: 48%;
+    margin: 10px 0;
+}
+.insert .menu .btnMenu:hover {
+    background-color: #038abb;
+}
+.insert .menu .btnMenu.btn-primary {
+    background-color: #c40055;
+    width: 100%;
+}
+.insert .menu .btnMenu.btn-primary:hover {
+    background-color: #f30a6f;
+}
+/* start account  */
+.insert .screens .accounts .creditCard,
+.insert .screens .transactions .transaction ,
+.insert .screens .accounts .account {
+    background-color: #675b69;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 10px;
+    text-align: start;
+    color: #fff;
+    cursor: pointer;
+}
+
+.insert .screens .transactions .transaction i.fa-arrow-up {
+    color: red;
+}
+
+.insert .screens .transactions .transaction i.fa-arrow-down {
+    color: rgb(5, 179, 5);
+}
+
+/* start service login pop up */
+
+.popup {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.801);
+    box-shadow: 0 0 12px rgb(0, 0, 0);
+    padding: 20px;
+    z-index: -1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.popup.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 5;
+}
+
+.popup i {
+    position: absolute;
+    right: 20px;
+    color: red;
+    top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    body {
+        height: unset;
+    }
+
+    .insert .screens .screen {
+        width: 90%;
+    }
+
+    .popup {
+        width: 90%;
+
+    }
+
+    .form-floating>label {
+        font-size: 14px;
+    }
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #cef;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #cef transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* CHAT GPT */
+a {
+    width: fit-content;
+    text-decoration: none; /* remove underline */
+}
+
+span[value="Approved"]{
+    color: lime;
+}
+
+span[value="Denied"]{
+    color: rgb(255, 0, 0);
+}
+
+#blockCard{
+    color: crimson;
+    background-color: bisque;
+    font-weight: bold;
+    border-width: 3px;
+}
+
+img[alt="Back button"]{
+    width: 50px; /* set the desired width */
+    height: auto; /* maintain aspect ratio */
+}
